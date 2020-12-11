@@ -1,0 +1,6 @@
+#name - DNS-friendly name for the workshop. This will be used when generating the hosting URL (ie. https://my-first-workshop.workshops.aws/)
+name: workshopname
+#title - The title of your workshop
+title: Workshop
+#description - A short description that will be displayed in search results
+description: In this workshop...
