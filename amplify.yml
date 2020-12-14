@@ -1,7 +1,7 @@
 version: 0.1
 env:
   variables:
-      VERSION_HUGO: 0.55.6
+      VERSION_HUGO: 0.73
 frontend:
   phases:
     build:
