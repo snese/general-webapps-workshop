@@ -1,6 +1,0 @@
-#name - DNS-friendly name for the workshop. This will be used when generating the hosting URL (ie. https://my-first-workshop.workshops.aws/)
-name: https://general-webapps.lab.hclo.dev/
-#title - The title of your workshop
-title: General Webapps Workshop
-#description - A short description that will be displayed in search results
-description: In this workshop, you'll learn a hosting webapps service evolution from single instance architecture to a HA architecture.

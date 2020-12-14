@@ -3,7 +3,7 @@ CanonifyURLs=true
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Workshop Title"
+title = "General Webapps Workshops"
 theme = "learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
@@ -14,9 +14,9 @@ pygmentsCodeFences = true
 pygmentsStyle = "monokai"
 
 [params]
-  editURL = "https://github.com/org/repo"
+  editURL = "https://github.com/snese/general-webapps-workshop"
   description = "Description"
-  author = "Author Name"
+  author = "Taiwan SA Team"
   disableBreadcrumb = false
   disableNextPrev = false
   themeVariant = "aws"
