@@ -14,7 +14,6 @@ frontend:
         - npm run deploytemplates
   artifacts:
     # IMPORTANT - Please verify your build output directory
-    # - hugo --source workshop --destination ../public --quiet
     baseDirectory: public
     files:
       - '**/*'
