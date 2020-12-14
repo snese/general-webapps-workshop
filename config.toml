@@ -38,3 +38,9 @@ hrefTargetBlank = true
 title = " "
 weight = 1
 languageName = "English"
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/snese/general-webapps-workshop"
+weight = 10
