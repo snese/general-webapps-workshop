@@ -11,7 +11,6 @@ frontend:
         - echo '<p class=build-number>'${IMAGE_TAG}'</p>' >> workshop/layouts/partials/menu-footer.html
         - cd workshop
         - hugo -v
-        - npm run deploytemplates
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: public
