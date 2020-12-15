@@ -1,6 +1,3 @@
----
-title: "Test"
-date: 2020-12-15T16:57:54+08:00
-draft: true
----
+[wp-config.php example](https://gist.github.com/hhh2012aa/6bdec9cca9ed1b9c2b6b0888a9f67e2c)
 
+[Use putty to connect to EC2 Instance](./putty_setup.pdf)
