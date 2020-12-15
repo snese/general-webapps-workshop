@@ -1,4 +1,9 @@
-IAM Workshop
++++
+title = "IAM Lab"
+chapter = false
+weight = 30
++++
+
 |  | |
 | --- | --- |
 | 步驟一 | 下載Amazon CloudFormation 範本 |
