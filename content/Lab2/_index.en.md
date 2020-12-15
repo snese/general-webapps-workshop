@@ -128,14 +128,14 @@ sudo service httpd restart
 
 #### 3a. Create distribution via cli
 
-[GitHub Repo](https://github.com/hhh2012aa/create-CloudFront)
+[GitHub Repo](https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard)
 
 * Open a Cloud9 IDE, and run following scripts in terminal
 
 ```
-git clone https://github.com/hhh2012aa/create-CloudFront/
-cd create-CloudFront
-python create-config
+git clone https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard
+cd wordpress-cloudfront-distrubution-config-wizard/
+python create-config.py
 ```
 
 ```
