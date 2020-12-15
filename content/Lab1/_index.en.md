@@ -37,7 +37,7 @@ weight = 30
 * For **Templates**, select **Free tier**, 
 * In **Settings** section, 
 * For **DB identifier**, enter `wordpress`, 
-* For **Credentials Settings**, enter your **Master username** and  **Master password**
+* For **Credentials Settings**, enter your **Master username** and  **Master password** (for example: #12345678aA)
 
 ![](https://i.imgur.com/wwKhUUz.png)
 
@@ -47,7 +47,7 @@ weight = 30
 * For **Virtual private cloud (VPC)**, select **Vpc / vpc-stack** created in last step
 * Click **Additional connectivity configuration** to show more configuration
 * For **Public access**, select **No**
-* For **VPC security group**, select **Create new** and enter `database-sg` in **New VPC security group name**
+* For **VPC security group**, select **Create new** and enter `db-sg` in **New VPC security group name**
 
 ![](https://i.imgur.com/3O70TNI.png)
 
@@ -68,7 +68,7 @@ weight = 30
 
 ![](https://i.imgur.com/E5O3WJA.png)
 
-* In **Configure Instance Details** page**
+* In **Configure Instance Details** page
 * For **Network**, select **Vpc / vpc-stack**
 * For **Subnet**, select **PublicSubnet0**
 * Click **Next: Add Storage** → **Next: Add Tags**
@@ -92,10 +92,10 @@ weight = 30
 * Visit [**Security Groups**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:) page, select `public-instance-sg `, 
 * Click **Edit inbound rules** button
 * Click **Add rule**, For **Type**, select **MYSQL/Aurora**, 
-* For **Source**, select custom and find the `database-sg` , and click **Save rules**
+* For **Source**, select custom and find the `db-sg` , and click **Save rules**
 * Click **Add rule**, For **Type**, select **HTTP**, 
 * For **Source**, select **My IP** , and click **Save rules**
-* Visit [**Security Groups**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:) page, select `database-sg` , 
+* Visit [**Security Groups**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:) page, select `db-sg` , 
 * Click **Edit inbound rules** button
 * Click **Add rule**, For **Type**, select **MYSQL/Aurora**, 
 * For **Source**, select custom and find the `wordpress-instance-sg` , and click **Save rules**
@@ -122,7 +122,7 @@ sudo yum install -y httpd
 sudo yum install -y mysql
 ```
 
-* Set the environment variable of MySQL in your computer, replace `<your-endpoint>` to the endpoint which can be found in [**RDS console **](https://console.aws.amazon.com/rds/home?region=us-east-1#databases:)→ your database
+* Set the environment variable of MySQL in your computer, replace `<your-endpoint>` to the endpoint which can be found in [**RDS console**](https://console.aws.amazon.com/rds/home?region=us-east-1#databases:)→ your database
 
 ```
 export MYSQL_HOST=<your-endpoint>
@@ -157,7 +157,7 @@ cd wordpress
 cp wp-config-sample.php wp-config.php
 ```
 
-* After that use nano to edit the **wp-config.php **file
+* After that use nano to edit the **wp-config.php** file
 
 ```
 nano wp-config.php
@@ -165,10 +165,10 @@ nano wp-config.php
 
 * Modify the following script into the correct value: 
 
-● **DB_NAME: **`'wordpress'`
-● **DB_USER: **`'wordpress'`
-● **DB_PASSWORD: **`'wordpress-pass'`
-● **DB_HOST: **`your RDS endpoint `
+● **DB_NAME:** `'wordpress'`
+● **DB_USER:** `'wordpress'`
+● **DB_PASSWORD:** `'wordpress-pass'`
+● **DB_HOST:** `your RDS endpoint `
 
 ```
 // ** MySQL settings - You can get this info from your web host ** //
@@ -214,7 +214,8 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 * Also, paste the script below. After modifying the right value in configuration file, use **CTRL + O** to save file, **CTRL + X **to quit** nano editor**
 
 ```
-`define( 'W3TC_CONFIG_DATABASE', true );`
+/** to allow 'W3TC' plugin write the configuration data into DB */
+define( 'W3TC_CONFIG_DATABASE', true );
 ```
 
 * Run the following command to deploy WordPress on your computer: 
@@ -275,7 +276,7 @@ sudo systemctl restart php-fpm
 ![](https://i.imgur.com/yvYxvbb.png)
 
 * Click **Performance/CDN** on the left menu, scroll down to find **Configuration: Objects** section 
-* Copy and paste the **Access key ID** and **Private key** from IAM user creation page
+* Copy and paste the **Access key ID** and **Secret key** from IAM user creation page
 * For **Bucket**, enter `wp-workshop-<custom name>` and click **Create as new bucket**
 * Click **Test S3 upload** to ensure connection succeeded and click **Save settings & Purge Caches**
 * Click the **Page/All pages** on the left menu, click **Simple page** to edit it click “+” icon on the top left and insert a sample image, then click **Update** to confirm the change
