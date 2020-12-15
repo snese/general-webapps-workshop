@@ -136,7 +136,6 @@ sudo service httpd restart
 git clone https://github.com/hhh2012aa/create-CloudFront/
 cd create-CloudFront
 python create-config
-# then paste your alb and S3 domain to create configuration file
 ```
 
 ```
