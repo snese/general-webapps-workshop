@@ -1,8 +1,16 @@
-+++
-title = "Lab1"
-chapter = false
-weight = 30
-+++
+---
+title: "Lab1"
+chapter: false
+weight: 30
+tags:
+  - VPC
+  - S3
+  - CloudFormation
+  - RDS MySQL
+  - EC2
+  - Security Group
+  - IAM
+---
 
 
 

@@ -14,7 +14,7 @@ pygmentsCodeFences = true
 pygmentsStyle = "monokai"
 
 [params]
-  editURL = "https://github.com/snese/general-webapps-workshop"
+  editURL = "https://github.com/snese/general-webapps-workshop/"
   description = "Description"
   author = "Taiwan SA Team"
   disableBreadcrumb = false

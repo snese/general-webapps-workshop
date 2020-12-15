@@ -1,8 +1,14 @@
-+++
-title = "Lab2"
-chapter = false
-weight = 30
-+++
+---
+title: "Lab2"
+chapter: false
+weight: 30
+tags:
+  - ALB
+  - Auto Scaling Group
+  - RDS MySQL
+  - CloudFront
+  - EC2
+---
 
 
 ### 1. Create an Application Load Balancer
