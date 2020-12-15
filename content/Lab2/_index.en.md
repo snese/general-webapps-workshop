@@ -130,7 +130,7 @@ sudo service httpd restart
 
 [GitHub Repo](https://github.com/hhh2012aa/create-CloudFront)
 
-* Open a Cloud9 IDE, and run the following script in terminal
+* Open a Cloud9 IDE, and run following scripts in terminal
 
 ```
 git clone https://github.com/hhh2012aa/create-CloudFront/
@@ -228,4 +228,4 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 * Click **Setting/General** on the left menu
 * For **WordPress Address (URL)** and **Site Address (URL)**, enter your CloudFront domain and click **Save Changes**
 
-![](https://i.imgur.com/gE35YcI.png)
+![](https://i.imgur.com/mEOTsq8.png)
