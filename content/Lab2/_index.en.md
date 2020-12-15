@@ -122,11 +122,33 @@ sudo service httpd restart
 ![](https://i.imgur.com/Ax28s5D.png)
 
 * In **Review** sections, click Create **Auto Scaling group** 
+
 ### 3. Create a CloudFront Distribution
+
+
+#### 3a. Create distribution via cli
+
+[GitHub Repo](https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard)
+
+* Open a Cloud9 IDE, and run following scripts in terminal
+
+```
+git clone https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard
+cd wordpress-cloudfront-distrubution-config-wizard/
+python create-config.py
+```
+
+```
+# Create CloudFront distribution using configuration file
+aws cloudfront create-distribution --distribution-config file://my-create-CloudFront.json
+```
+
+#### 3b. Create distribution manually
 
 * Visit CloudFront console, and click **Create distributions**, choose **Web** for delivery method
 
 ![](https://i.imgur.com/oelcoPd.png)
+
 
 * For **Origin Domain Name**, select **wordpress-alb**
 
@@ -206,4 +228,4 @@ sudo service httpd restart
 * Click **Setting/General** on the left menu
 * For **WordPress Address (URL)** and **Site Address (URL)**, enter your CloudFront domain and click **Save Changes**
 
-![](https://i.imgur.com/gE35YcI.png)
+![](https://i.imgur.com/mEOTsq8.png)
