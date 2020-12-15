@@ -13,13 +13,13 @@ weight = 30
 | 步驟五 | 透過IAM Role 授權 |
 | 步驟六 | 刪除資源 |
 
-步驟一：
+### 步驟一：
 
 下載Amazon CloudFormation 範本 IAMLAB.yaml
 
 [https://github.com/hhh2012aa/IAM-LAB/blob/main/IAMLAB.yaml](https://github.com/hhh2012aa/IAM-LAB/blob/main/IAMLAB.yaml)
 
-步驟二：
+### 步驟二：
 
 透過 Amazon CloudFormation 建立以下資源
 
@@ -82,7 +82,7 @@ weight = 30
 ![](https://i.imgur.com/YMCyvCH.png)
 
 
-步驟三：
+### 步驟三：
 
 現有IAM 使用者規則驗證及操作
 
@@ -139,7 +139,7 @@ weight = 30
 
 輸入User 密碼：12345678aA
 
-步驟四
+### 步驟四
 
 透過IAM Group 授權
 
@@ -175,7 +175,7 @@ weight = 30
 1. 進入AWS EC2管理畫面
 2. 進入AWS IAM管理頁面
 
-步驟五：
+### 步驟五：
 
 透過AssumeRole 授權
 
@@ -236,7 +236,7 @@ URL範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;
 
 * 進入AWS EC2管理畫面，將 EC2(finance\_instance) 刪除(TERMINATE)
 
-步驟六
+### 步驟六
 
 刪除資源
 
