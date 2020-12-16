@@ -119,7 +119,7 @@ tags:
 
 ![](https://i.imgur.com/6bGhVJ1.png)
 
-**Windows User:** follow the step in [this deck](https://quip-amazon.com/MdaQAuxvdvUs/puttysetup) to connect EC2 instance by [**Putty**](https://www.putty.org/)
+**Windows User:** follow the step in [this deck](https://github.com/snese/general-webapps-workshop/blob/main/content/Reference/putty_setup.pdf) to connect EC2 instance by [**Putty**](https://www.putty.org/)
 
 **MacOS User:** open a **terminal** on your computer, navigate to the folder where your **.pem key file** is stored, and paste the connection command.
 
@@ -287,7 +287,7 @@ sudo systemctl restart php-fpm
 * Copy and paste the **Access key ID** and **Secret key** from IAM user creation page
 * For **Bucket**, enter `wp-workshop-<custom name>` and click **Create as new bucket**
 * Click **Test S3 upload** to ensure connection succeeded and click **Save settings & Purge Caches**
-* Click the **Page/All pages** on the left menu, click **Simple page** to edit it click “+” icon on the top left and insert a sample image, then click **Update** to confirm the change
+* Click the **Page/All pages** on the left menu, click **Simple page** to edit it click “+” icon on the top left and insert a sample image, then click **Update** to confirm the change. [download sample image](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_REV_SQ.8c88ac215fe4e441dc42865dd6962ed4f444a90d.png)
 * Click **Performance/CDN** the left menu and click **export the media library, wp-includes, theme files**  
 * Click **custom files → start** button to export file from EC2 to S3 bucket
 
