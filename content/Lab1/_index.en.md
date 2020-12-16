@@ -111,7 +111,7 @@ weight = 30
 
 ![](https://i.imgur.com/6bGhVJ1.png)
 
-**Windows User:** follow the step in [this deck](https://quip-amazon.com/MdaQAuxvdvUs/puttysetup) to connect EC2 instance by [**Putty**](https://www.putty.org/)
+**Windows User:** follow the step in [this deck](https://github.com/snese/general-webapps-workshop/blob/main/content/Reference/putty_setup.pdf) to connect EC2 instance by [**Putty**](https://www.putty.org/)
 
 **MacOS User:** open a **terminal** on your computer, navigate to the folder where your **.pem key file** is stored, and paste the connection command.
 
