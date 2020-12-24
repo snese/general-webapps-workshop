@@ -54,38 +54,38 @@ tags:
 
 [https://console.aws.amazon.com/cloudformation/home?region=us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1)
 
-![](https://i.imgur.com/dAvdy2X.png)
+![](./assets/IAM-lab-1.png)
 
 
 2.2
 
 點選 Create stack
 
-![](https://i.imgur.com/WRVSP4p.png)
+![](./assets/IAM-lab-2.png)
 
 
 2.3
 
-![](https://i.imgur.com/9ik6R1A.png)
+![](./assets/IAM-lab-3.png)
 
 
 2.4
 
-![](https://i.imgur.com/XY34kld.png)
+![](./assets/IAM-lab-4.png)
 
 
 2.5
 
 使用預設設定值，點選下一步
 
-![](https://i.imgur.com/4JaNa5w.png)
+![](./assets/IAM-lab-5.png)
 
 
 2.6
 
 勾選確認建立 IAM:Role，點擊 Create stack
 
-![](https://i.imgur.com/YMCyvCH.png)
+![](./assets/IAM-lab-6.png)
 
 
 ### 步驟三
@@ -96,10 +96,10 @@ tags:
 
 進入 AWS IAM 管理頁面，取得登入 AWS Console URL
 
-![](https://i.imgur.com/P8WgFEO.png)
+![](./assets/IAM-lab-7.png)
 
 
-![](https://i.imgur.com/LsW2Lnq.png)
+![](./assets/IAM-lab-8.png)
 
 
 3.2
@@ -114,7 +114,7 @@ tags:
 
 輸入 User 密碼：12345678aA
 
-![](https://i.imgur.com/Bc3VAVk.png)
+![](./assets/IAM-lab-9.png)
 
 
 3.3
@@ -126,16 +126,16 @@ tags:
 3. 進入 AWS EC2 管理畫面，將 EC2(hr\_instance) 刪除(TERMINATE)
 4. 進入 AWS IAM 管理頁面
 
-![](https://i.imgur.com/g01H6HU.png)
+![](./assets/IAM-lab-10.png)
 
 
-![](https://i.imgur.com/2221QJn.png)
+![](./assets/IAM-lab-11.png)
 
 
-![](https://i.imgur.com/uai3DH2.png)
+![](./assets/IAM-lab-12.png)
 
 
-![](https://i.imgur.com/hw43FY6.png)
+![](./assets/IAM-lab-13.png)
 
 3.4
 
@@ -168,10 +168,10 @@ tags:
 
 執行新增使用者操作，將使用者 John 加入 AWS Group(Contractors)
 
-![](https://i.imgur.com/BO1ItzE.png)
+![](./assets/IAM-lab-14.png)
 
 
-![](https://i.imgur.com/uuJQLRJ.png)
+![](./assets/IAM-lab-15.png)
 
 
 4.3
@@ -189,9 +189,9 @@ tags:
 
 於 AWS IAM Role 管理頁面，取得 AssumeRole 登入 URL
 
-![](https://i.imgur.com/6aSLWES.png)
+![](./assets/IAM-lab-16.png)
 
-![](https://i.imgur.com/tnSXfBw.png)
+![](./assets/IAM-lab-17.png)
 
 
 5.2
@@ -207,11 +207,11 @@ URL 範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp
 3. 進入 AWS EC2管理畫面，將 EC2(hr\_instance) 刪除(TERMINATE)
 4. 進入 AWS IAM管理頁面
 
-![](https://i.imgur.com/u9dZtPd.png)
+![](./assets/IAM-lab-18.png)
 
-![](https://i.imgur.com/HB6Drql.png)
+![](./assets/IAM-lab-19.png)
 
-![](https://i.imgur.com/7ddmFh6.png)
+![](./assets/IAM-lab-20.png)
 
 
 5.3
@@ -220,7 +220,7 @@ URL 範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp
 
 URL 範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281](https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281)
 
-![](https://i.imgur.com/gNl6NVJ.png)
+![](./assets/IAM-lab-21.png)
 
 
 5.4
@@ -229,11 +229,11 @@ URL 範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp
 
 新增 custom policy(contractorsroleassumptionpolicy) 給使用者 Sally
 
-![](https://i.imgur.com/Ob8dVn6.png)
+![](./assets/IAM-lab-22.png)
 
-![](https://i.imgur.com/4w7YEWJ.png)
+![](./assets/IAM-lab-23.png)
 
-![](https://i.imgur.com/m80AsY9.png)
+![](./assets/IAM-lab-24.png)
 
 
 5.5
