@@ -1,21 +1,27 @@
-+++
-title = "IAM Lab"
-chapter = false
-weight = 30
-+++
+---
+title: "IAM Lab"
+chapter: false
+weight: 30
+tags:
+  - IAM
+  - EC2
+  - IAM Role
+  - IAM User
+  - IAM Group
+---
 
 |  | |
 | --- | --- |
-| 步驟一 | 下載Amazon CloudFormation 範本 |
-| 步驟二 | 透過Amazon CloudFormation 建立資源 |
-| 步驟三 | 現有IAM 使用者及規則驗證及操作 |
-| 步驟四 | 透過IAM Group 授權 |
-| 步驟五 | 透過IAM Role 授權 |
+| 步驟一 | 下載 Amazon CloudFormation 範本 |
+| 步驟二 | 透過 Amazon CloudFormation 建立資源 |
+| 步驟三 | 現有 IAM 使用者及規則驗證及操作 |
+| 步驟四 | 透過 IAM Group 授權 |
+| 步驟五 | 透過 IAM Role 授權 |
 | 步驟六 | 刪除資源 |
 
 ### 步驟一
 
-下載Amazon CloudFormation 範本 IAMLAB.yaml
+下載 Amazon CloudFormation 範本 IAMLAB.yaml
 
 [https://github.com/hhh2012aa/IAM-LAB/blob/main/IAMLAB.yaml](https://github.com/hhh2012aa/IAM-LAB/blob/main/IAMLAB.yaml)
 
@@ -44,197 +50,197 @@ weight = 30
 
 2.1
 
-開啟CloudFormation管理頁面
+開啟 CloudFormation 管理頁面
 
 [https://console.aws.amazon.com/cloudformation/home?region=us-east-1](https://console.aws.amazon.com/cloudformation/home?region=us-east-1)
 
-![](https://i.imgur.com/dAvdy2X.png)
+![](./assets/IAM-lab-1.png)
 
 
 2.2
 
 點選 Create stack
 
-![](https://i.imgur.com/WRVSP4p.png)
+![](./assets/IAM-lab-2.png)
 
 
 2.3
 
-![](https://i.imgur.com/9ik6R1A.png)
+![](./assets/IAM-lab-3.png)
 
 
 2.4
 
-![](https://i.imgur.com/XY34kld.png)
+![](./assets/IAM-lab-4.png)
 
 
 2.5
 
 使用預設設定值，點選下一步
 
-![](https://i.imgur.com/4JaNa5w.png)
+![](./assets/IAM-lab-5.png)
 
 
 2.6
 
-勾選確認建立IAM:Role，點擊Create stack
+勾選確認建立 IAM:Role，點擊 Create stack
 
-![](https://i.imgur.com/YMCyvCH.png)
+![](./assets/IAM-lab-6.png)
 
 
 ### 步驟三
 
-現有IAM 使用者規則驗證及操作
+現有 IAM 使用者規則驗證及操作
 
 3.1
 
-進入AWS IAM 管理頁面，取得登入AWS Console URL
+進入 AWS IAM 管理頁面，取得登入 AWS Console URL
 
-![](https://i.imgur.com/P8WgFEO.png)
+![](./assets/IAM-lab-7.png)
 
 
-![](https://i.imgur.com/LsW2Lnq.png)
+![](./assets/IAM-lab-8.png)
 
 
 3.2
 
 開啟新的無痕瀏覽器頁面，建議使用不同的瀏覽器操作
 
-使用上一步驟得到的URL進行登入
+使用上一步驟得到的 URL 進行登入
 
 範例：[https://540276846281.signin.aws.amazon.com/console](https://540276846281.signin.aws.amazon.com/console)
 
-輸入User 名稱：Anne
+輸入 User 名稱：Anne
 
-輸入User 密碼：12345678aA
+輸入 User 密碼：12345678aA
 
-![](https://i.imgur.com/Bc3VAVk.png)
+![](./assets/IAM-lab-9.png)
 
 
 3.3
 
 嘗試以下操作
 
-1. 進入AWS EC2管理畫面，將EC2(hr\_instance) 開機(START) or關機(STOP)
-2. 進入AWS EC2管理畫面，將EC2(finance\_instance) 開機(START) or 關機(STOP)
-3. 進入AWS EC2管理畫面，將 EC2(hr\_instance) 刪除(TERMINATE)
-4. 進入AWS IAM管理頁面
+1. 進入 AWS EC2 管理畫面，將 EC2(hr\_instance) 開機(START) or 關機(STOP)
+2. 進入 AWS EC2 管理畫面，將 EC2(finance\_instance) 開機(START) or 關機(STOP)
+3. 進入 AWS EC2 管理畫面，將 EC2(hr\_instance) 刪除(TERMINATE)
+4. 進入 AWS IAM 管理頁面
 
-![](https://i.imgur.com/g01H6HU.png)
-
-
-![](https://i.imgur.com/2221QJn.png)
+![](./assets/IAM-lab-10.png)
 
 
-![](https://i.imgur.com/uai3DH2.png)
+![](./assets/IAM-lab-11.png)
 
 
-![](https://i.imgur.com/hw43FY6.png)
+![](./assets/IAM-lab-12.png)
+
+
+![](./assets/IAM-lab-13.png)
 
 3.4
 
-登出目前使用者，並登入使用者Sally，重複上述3.2 及3.3操作
+登出目前使用者，並登入使用者 Sally，重複上述 3.2 及 3.3 操作
 
-輸入User 名稱：Sally
+輸入 User 名稱：Sally
 
-輸入User 密碼：12345678aA
+輸入 User 密碼：12345678aA
 
 ### 步驟四
 
-透過IAM Group 授權
+透過 IAM Group 授權
 
 4.1
 
-登出目前使用者，並登入使用者John，
+登出目前使用者，並登入使用者 John，
 
-輸入User 名稱：John
+輸入 User 名稱：John
 
-輸入User 密碼：12345678aA
+輸入 User 密碼：12345678aA
 
 嘗試以下操作
 
-1. 進入AWS EC2管理畫面
-2. 進入AWS IAM管理頁面
+1. 進入 AWS EC2 管理畫面
+2. 進入 AWS IAM 管理頁面
 
 4.2
 
-切換回到root 使用者操作視窗，並進入AWS IAM 管理頁面，點擊左側Group
+切換回到 root 使用者操作視窗，並進入 AWS IAM 管理頁面，點擊左側 Group
 
-執行新增使用者操作，將使用者John加入AWS Group(Contractors)
+執行新增使用者操作，將使用者 John 加入 AWS Group(Contractors)
 
-![](https://i.imgur.com/BO1ItzE.png)
+![](./assets/IAM-lab-14.png)
 
 
-![](https://i.imgur.com/uuJQLRJ.png)
+![](./assets/IAM-lab-15.png)
 
 
 4.3
 
-切換回使用者John 操作畫面，嘗試以下操作
+切換回使用者 John 操作畫面，嘗試以下操作
 
-1. 進入AWS EC2管理畫面
-2. 進入AWS IAM管理頁面
+1. 進入 AWS EC2 管理畫面
+2. 進入 AWS IAM 管理頁面
 
 ### 步驟五
 
-透過AssumeRole 授權
+透過 AssumeRole 授權
 
 5.1
 
-於AWS IAM Role管理頁面，取得AssumeRole登入URL
+於 AWS IAM Role 管理頁面，取得 AssumeRole 登入 URL
 
-![](https://i.imgur.com/6aSLWES.png)
+![](./assets/IAM-lab-16.png)
 
-![](https://i.imgur.com/tnSXfBw.png)
+![](./assets/IAM-lab-17.png)
 
 
 5.2
 
-使用者John透過前步驟中Switch URL切換至 AssumeRole (ec2poweruser) ，取得AWS EC2管理權限
+使用者 John 透過前步驟中 Switch URL 切換至 AssumeRole (ec2poweruser) ，取得 AWS EC2 管理權限
 
-URL範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281](https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281)
+URL 範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281](https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281)
 
 嘗試以下操作
 
-1. 進入AWS EC2管理畫面，將EC2(hr\_instance) 開機(START) or 關機(STOP)
-2. 進入AWS EC2管理畫面，將EC2(finance\_instance) 開機(START) or 關機(STOP)
-3. 進入AWS EC2管理畫面，將 EC2(hr\_instance) 刪除(TERMINATE)
-4. 進入AWS IAM管理頁面
+1. 進入 AWS EC2管理畫面，將 EC2(hr\_instance) 開機(START) or 關機(STOP)
+2. 進入 AWS EC2管理畫面，將 EC2(finance\_instance) 開機(START) or 關機(STOP)
+3. 進入 AWS EC2管理畫面，將 EC2(hr\_instance) 刪除(TERMINATE)
+4. 進入 AWS IAM管理頁面
 
-![](https://i.imgur.com/u9dZtPd.png)
+![](./assets/IAM-lab-18.png)
 
-![](https://i.imgur.com/HB6Drql.png)
+![](./assets/IAM-lab-19.png)
 
-![](https://i.imgur.com/7ddmFh6.png)
+![](./assets/IAM-lab-20.png)
 
 
 5.3
 
-登出目前使用者 John，並嘗試使用使用者Sally登入AssumeRole URL
+登出目前使用者 John，並嘗試使用使用者 Sally 登入 AssumeRole URL
 
-URL範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281](https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281)
+URL 範例：[https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281](https://signin.aws.amazon.com/switchrole?roleName=ec2poweruser&amp;account=540276846281)
 
-![](https://i.imgur.com/gNl6NVJ.png)
+![](./assets/IAM-lab-21.png)
 
 
 5.4
 
-切換回到root 使用者操作視窗，並進入AWS IAM 管理頁面，點擊左側User
+切換回到 root 使用者操作視窗，並進入 AWS IAM 管理頁面，點擊左側 User
 
-新增custom policy(contractorsroleassumptionpolicy)給使用者Sally
+新增 custom policy(contractorsroleassumptionpolicy) 給使用者 Sally
 
-![](https://i.imgur.com/Ob8dVn6.png)
+![](./assets/IAM-lab-22.png)
 
-![](https://i.imgur.com/4w7YEWJ.png)
+![](./assets/IAM-lab-23.png)
 
-![](https://i.imgur.com/m80AsY9.png)
+![](./assets/IAM-lab-24.png)
 
 
 5.5
 
-重複操作步驟5.3，並嘗試以下操作:
+重複操作步驟 5.3，並嘗試以下操作:
 
-* 進入AWS EC2管理畫面，將 EC2(finance\_instance) 刪除(TERMINATE)
+* 進入 AWS EC2 管理畫面，將 EC2(finance\_instance) 刪除(TERMINATE)
 
 ### 步驟六
 

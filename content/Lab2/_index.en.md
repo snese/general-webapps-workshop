@@ -1,8 +1,14 @@
-+++
-title = "Lab2"
-chapter = false
-weight = 30
-+++
+---
+title: "Lab2"
+chapter: false
+weight: 30
+tags:
+  - ALB
+  - Auto Scaling Group
+  - RDS MySQL
+  - CloudFront
+  - EC2
+---
 
 
 ### 1. Create an Application Load Balancer
@@ -11,35 +17,35 @@ weight = 30
 * Click **Actions** → **Image and templates** → **Create image**
 * Enter the **Image name** and click **Create image**
 
-![](https://i.imgur.com/lmMDpCH.png)
+![](./assets/lab2-1.png)
 
 * Visit **EC2/Load Balancing/Load Balancers**
 * Click **Create Load Balalncer**
 
-![](https://i.imgur.com/OAgmUPI.png)
+![](./assets/lab2-2.png)
 
 * In **Step 1: Select load balancer type**, find **Application Load Balancer** and click **Create**
 
-![](https://i.imgur.com/O4EsZ8m.png)
+![](./assets/lab2-3.png)
 
 * In **Basic Configuration** section, enter the name `wordpress-alb`
 * In **Availability Zones**, for **VPC**, choose **Vpc / vpc-stack** created by CloudFormation
 * For **Availability Zones**, select **us-east-1a/PublicSubnet0** and **us-east-1b/PublicSubnet1**
 
-![](https://i.imgur.com/Ht6Jp0W.png)
+![](./assets/lab2-4.png)
 
 * In **Step 2: Configure Security Settings**, click **Next**
 * In **Step 3: Configure Security Groups**, for **Assign a security group**, choose **Create a new security group**
 * For **Security group name**, enter `alb-sg` and click **Next Configure Routing**
 
-![](https://i.imgur.com/0hG9G1S.png)
+![](./assets/lab2-5.png)
 
 * In **Step 4: Configure Routing**
 * For **Target Group**, select **New target group**
 * For **Name**, enter `wordpress-tg`
 * For **Target type**, select **Instance** and click **Next: Register Targets**
 
-![](https://i.imgur.com/vGqR8V9.png)
+![](./assets/lab2-6.png)
 
 * In **Register Targets** stage, click **Next: Review**
 * In **Review** stage, click **Create**
@@ -49,7 +55,7 @@ weight = 30
 * Visit **EC2/Network & Security/Security Groups**
     Click **Create security group**
 
-![](https://i.imgur.com/l8pJvGb.png)
+![](./assets/lab2-7.png)
 
 * For **Security group name**, enter `asg-sg`
 * For **Description**, enter `asg-sg`
@@ -62,7 +68,7 @@ weight = 30
 * For **Source**, select **Custom** and find **db-sg**
 * Click **Create security group**
 
-![](https://i.imgur.com/kuYzJTo.png)
+![](./assets/lab2-8.png)
 
 * Visit **EC2/Network & Security/Security Groups**
 * Find **db-sg** and click its **Security group ID**
@@ -77,7 +83,7 @@ weight = 30
 * For **AMI**, choose AMI created in last step
 * For **Instance type**, search and select **t2.micro**
 
-![](https://i.imgur.com/Sur2IKo.png)
+![](./assets/lab2-9.png)
 
 * In **Additional configuration** section, click **Advanced details**
 * For **User data**, select **As text** and enter the script below
@@ -87,21 +93,21 @@ yum update -y
 sudo service httpd restart
 ```
 
-![](https://i.imgur.com/7rdswGL.png)
+![](./assets/lab2-10.png)
 
 * For **Security group**,select **Select an existing security group** and select **asg-sg** just created
 * For **Key pair options**, select **Choose an existing key pair**
 * For **Existing key pair**, select the key created in Lab 1
 * Finally, click **Create launch configuration**
 
-![](https://i.imgur.com/KTfZwpm.png)
+![](./assets/lab2-11.png)
 
 * Visit **EC2/Auto Scaling/Auto Scaling Groups**
 * Click **Create an Auto Scaling Group**
 * For **Auto Scaling group name**, enter` wordpress-sg `
 * For **Launch template** section, click **Switch to launch configuration** and select the launch configuration created in last step and click **Next** 
 
-![](https://i.imgur.com/K9xdcBb.png)
+![](./assets/lab2-12.png)
 
 * In **Configure setting** stage,
 * For **Vpc**, select **Vpc / vpc-stack**, created by CloudFormation
@@ -110,16 +116,16 @@ sudo service httpd restart
 * For **Load balancing**, select **Attach to an existing load balancer**
 * For **Existing load balancer target groups**, select **alb-tg**
 
-![](https://i.imgur.com/9eA6SmS.png)
+![](./assets/lab2-13.png)
 
 * In **Configure group size and scaling policies** stage
 * In **Group size - optional** Section
 * For **Desired capacity, Minimum capacity, Maximum capacity**, enter **2,2,3**  then click **Next**
 * In **Add notifications** and **Add tags** sections, click **Next**
 
-![](https://i.imgur.com/ImuxvX5.png)
+![](./assets/lab2-14.png)
 
-![](https://i.imgur.com/Ax28s5D.png)
+![](./assets/lab2-15.png)
 
 * In **Review** sections, click Create **Auto Scaling group** 
 
@@ -147,12 +153,12 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 
 * Visit CloudFront console, and click **Create distributions**, choose **Web** for delivery method
 
-![](https://i.imgur.com/oelcoPd.png)
+![](./assets/lab2-16.png)
 
 
 * For **Origin Domain Name**, select **wordpress-alb**
 
-![](https://i.imgur.com/015OOCn.png)
+![](./assets/lab2-17.png)
 
 * In **Default Cache Behavior Settings**
 * For **Origin Protocol Policy**, select **HTTP and HTTPS**
@@ -167,7 +173,7 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 * For **Default TTL**, enter `300`
 * For **Forward Cookies**, select **All** 
 
-![](https://i.imgur.com/MQh8D34.png)
+![](./assets/lab2-18.png)
 
 * For **Query String Forwarding and Caching**, select **Forward all, cache based on all**
 * For **Smooth Streaming**, select **No**
@@ -175,14 +181,14 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 * For **Compress Objects Automatically**, select **Yes**
 * Finally, **Create Distribution**
 
-![](https://i.imgur.com/C1nLtKm.png)
+![](./assets/lab2-19.png)
 
 * Visit CloudFront Distribution page
 * Click the **distribution ID** created in last step
 * Click **Origins and Origin Groups **tab, and click **Create Origin**
 * For **Origin Domain Name**, select **S3 bucket** created in Lab 1 and Click **Create**
 
-![](https://i.imgur.com/eTomuZf.png)
+![](./assets/lab2-20.png)
 
 * Next, move to **Behavior** in your Distribution and click **Create Behavior**, follow the table below to create 4 new behaviors:
 
@@ -209,23 +215,23 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 
 * Find the Domain name of ALB Created in Step 1, paste it on browser to visit your WordPress page, scroll down and click **Log in** to enter the admin page
 
-![](https://i.imgur.com/Jzb38hy.png)
+![](./assets/lab2-21.png)
 
 * In admin page, click **Performance/General Settings** on the left menu
 * Scroll down to find the **CDN** section
 * For **CDN type**, select **Amazon CloudFront Over S3**
 * Click **Save Settings and Purge Caches**
 
-![](https://i.imgur.com/VF0nxkd.png)
+![](./assets/lab2-22.png)
 
 * Click **Performance/CDN** on the left menu, scroll down and find **Configuration:Objects** section
 * For **Access key ID** and **Secret key**, paste your IAM user credentials
 * For **Bucket**, enter your S3 bucket name created in Lab 1
 * For **Replace site's hostname with**, enter the CloudFront Domain created in last step and click **Save Settings and Purge Caches**
 
-![](https://i.imgur.com/cCd3tsv.png)
+![](./assets/lab2-23.png)
 
 * Click **Setting/General** on the left menu
 * For **WordPress Address (URL)** and **Site Address (URL)**, enter your CloudFront domain and click **Save Changes**
 
-![](https://i.imgur.com/mEOTsq8.png)
+![](./assets/lab2-24.png)

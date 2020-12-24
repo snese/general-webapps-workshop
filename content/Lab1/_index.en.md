@@ -1,8 +1,16 @@
-+++
-title = "Lab1"
-chapter = false
-weight = 30
-+++
+---
+title: "Lab1"
+chapter: false
+weight: 30
+tags:
+  - VPC
+  - S3
+  - CloudFormation
+  - RDS MySQL
+  - EC2
+  - Security Group
+  - IAM
+---
 
 
 
@@ -11,7 +19,7 @@ weight = 30
 * Visit [**CloudFormation console**](https://console.aws.amazon.com/cloudformation/home?region=us-east-1), paste **Amazon S3 URL** below, and Click **Next**
     `https://wp-workshop-template.s3.amazonaws.com/newvpc.template`
 
-![](https://i.imgur.com/tw0kfyC.png)
+![](./assets/lab1-1.png)
 
 * For **Stack name**, enter `vpc-stack` , For **Number of Availability Zones** select **2**, 
 * For **Availability Zones**, choose **us-east-1a** and **us-east-1b**, leave other setting as default value and click **Next**
@@ -19,19 +27,19 @@ weight = 30
 * On the **Review** page, review and confirm the settings. 
 * Check the box acknowledging that the template will create IAM resources and Click **Create Stack**
 
-![](https://i.imgur.com/tWmHJGg.png)
+![](./assets/lab1-2.png)
 
-![](https://i.imgur.com/hQIotgz.png)
+![](./assets/lab1-3.png)
 
 * After 3-5 minute, visit your **CloudFormation stacks** page, when the status of vpc-stack shows **CREAT_COMPLETE**, click **Outputs** in menu, you will see several resources are created.
 
-![](https://i.imgur.com/fh642o0.png)
+![](./assets/lab1-4.png)
 
 ### 2. Create a RDS MySQL Database
 
 * Visit [**RDS console**](https://console.aws.amazon.com/rds/home?region=us-east-1), click **Create Database**
 
-![](https://i.imgur.com/Ud8Xy4y.png)
+![](./assets/lab1-5.png)
 
 * For **Engine options**, select **MySQL**
 * For **Templates**, select **Free tier**, 
@@ -39,9 +47,9 @@ weight = 30
 * For **DB identifier**, enter `wordpress`, 
 * For **Credentials Settings**, enter your **Master username** and  **Master password** (for example: #12345678aA)
 
-![](https://i.imgur.com/wwKhUUz.png)
+![](./assets/lab1-6.png)
 
-![](https://i.imgur.com/s2SZrzq.png)
+![](./assets/lab1-7.png)
 
 * In **Connectivity** section, 
 * For **Virtual private cloud (VPC)**, select **Vpc / vpc-stack** created in last step
@@ -49,13 +57,13 @@ weight = 30
 * For **Public access**, select **No**
 * For **VPC security group**, select **Create new** and enter `db-sg` in **New VPC security group name**
 
-![](https://i.imgur.com/3O70TNI.png)
+![](./assets/lab1-8.png)
 
 * Scroll down and click **Additional configuration**, 
 * For **Initial database name**, enter `wordpress`,  
 * Finally, click **Create database**
 
-![](https://i.imgur.com/xkFZZr4.png)
+![](./assets/lab1-9.png)
 
 ### 3. Launch a EC2 Instance
 
@@ -64,41 +72,42 @@ weight = 30
 * In **Choose an Instance Type** page, select **t2.micro**
 * Click **Next: Configure Instance Details** button
 
-![](https://i.imgur.com/Nc3GX30.png)
+![](./assets/lab1-10.png)
 
-![](https://i.imgur.com/E5O3WJA.png)
+![](./assets/lab1-11.png)
 
 * In **Configure Instance Details** page
 * For **Network**, select **Vpc / vpc-stack**
 * For **Subnet**, select **PublicSubnet0**
 * Click **Next: Add Storage** → **Next: Add Tags**
 
-![](https://i.imgur.com/QDF5k9f.png)
+![](./assets/lab1-12.png)
 
 * For **Assign a security group**, select **Create a new Security Group**
 * For **Security group name**, enter `public-instance-sg `
 * In the pre-created rule, 
 * For **Source**, select **My IP**, your IP will be auto-detected, and click **Review and Launch** → **Launch**
 
-![](https://i.imgur.com/8W4MKr7.png)
+![](./assets/lab1-13.png)
 
 * Select **Create a new key pair**, Enter the **Key pair name** and click **Download key pair**
 * Finally, **Launch** the instance
 
-![](https://i.imgur.com/WIGJ0VK.png)
+![](./assets/lab1-14.png)
 
 ### 4. Modify Security Groups of RDS and EC2 instance
 
-* Visit [**Security Groups**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:) page, select `public-instance-sg `, 
-* Click **Edit inbound rules** button
-* Click **Add rule**, For **Type**, select **MYSQL/Aurora**, 
-* For **Source**, select custom and find the `db-sg` , and click **Save rules**
-* Click **Add rule**, For **Type**, select **HTTP**, 
-* For **Source**, select **My IP** , and click **Save rules**
+* Visit [**Security Groups**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:) page, select `public-instance-sg`, 
+  * Click **Edit inbound rules** button
+  * Click **Add rule**, For **Type**, select **MYSQL/Aurora**, 
+  * For **Source**, select custom and find the `db-sg` , and click **Save rules**
+  * Click **Add rule**, For **Type**, select **HTTP**, 
+  * For **Source**, select **My IP** , and click **Save rules**
+
 * Visit [**Security Groups**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#SecurityGroups:) page, select `db-sg` , 
-* Click **Edit inbound rules** button
-* Click **Add rule**, For **Type**, select **MYSQL/Aurora**, 
-* For **Source**, select custom and find the `wordpress-instance-sg` , and click **Save rules**
+  * Click **Edit inbound rules** button
+  * Click **Add rule**, For **Type**, select **MYSQL/Aurora**, 
+  * For **Source**, select custom and find the `public-instance-sg` , and click **Save rules**
 
 
 
@@ -109,7 +118,7 @@ weight = 30
 * Select the **Public** instance and click **Connect**, 
 * In **Connect to instance** page, click **SSH client** on menu and you can find the **connection command** in **Example**.
 
-![](https://i.imgur.com/6bGhVJ1.png)
+![](./assets/lab1-15.png)
 
 **Windows User:** follow the step in [this deck](https://github.com/snese/general-webapps-workshop/blob/main/content/Reference/putty_setup.pdf) to connect EC2 instance by [**Putty**](https://www.putty.org/)
 
@@ -245,23 +254,23 @@ sudo systemctl restart php-fpm
 * Click **Next: Tags** → **Next: Review** → **Create user** 
 * Click **Download .csv** to store your Access/Secret key
 
-![](https://i.imgur.com/TdQOjBC.png)
+![](./assets/lab1-16.png)
 
-![](https://i.imgur.com/nnkIFkj.png)
+![](./assets/lab1-17.png)
 
-![](https://i.imgur.com/AWvREXu.png)
+![](./assets/lab1-18.png)
 
-![](https://i.imgur.com/fnhO0kA.png)
+![](./assets/lab1-19.png)
 
 
 * Open another tab/window and visit [**EC2 console**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceId)
 * Select the EC2 instance, and find the **Public IPv4 DNS** in **Details** below and paste it on your browser, then you will see the setup page of WordPress.
 
-![](https://i.imgur.com/BCP7WUk.png)
+![](./assets/lab1-20.png)
 
 * In setup page, enter your own value in the **Site Title**, **Username**, **Password** and **Your Email**, then click **Install WordPress**
     
-![](https://i.imgur.com/lDNIOMy.png)
+![](./assets/lab1-21.png)
 
 * After few seconds, it will be redirected to Login page, 
 * Enter your **username** and **password**, and click **Login** button, you will see the **admin** page,
@@ -271,9 +280,9 @@ sudo systemctl restart php-fpm
 * In **CDN** section, for **CDN type**, select **Origin Push:S3**, 
 * For **CDN**, make sure it is **Enable** and Click **Save all Settings**
 
-![](https://i.imgur.com/AeH70D8.png)
+![](./assets/lab1-22.png)
 
-![](https://i.imgur.com/yvYxvbb.png)
+![](./assets/lab1-23.png)
 
 * Click **Performance/CDN** on the left menu, scroll down to find **Configuration: Objects** section 
 * Copy and paste the **Access key ID** and **Secret key** from IAM user creation page
@@ -283,10 +292,10 @@ sudo systemctl restart php-fpm
 * Click **Performance/CDN** the left menu and click **export the media library, wp-includes, theme files**  
 * Click **custom files → start** button to export file from EC2 to S3 bucket
 
-![](https://i.imgur.com/3xifcrA.png)
+![](./assets/lab1-24.png)
 
-![](https://i.imgur.com/CxNOyQS.png)
+![](./assets/lab1-25.png)
 
 * Now, you can view your sample page in `<your ec2 domain>/index.php/sample-page/`
     
-![](https://i.imgur.com/KWT0P0r.png)
+![](./assets/lab1-26.png)
