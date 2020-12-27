@@ -19,7 +19,7 @@ tags:
 * Visit [**CloudFormation console**](https://console.aws.amazon.com/cloudformation/home?region=us-east-1), paste **Amazon S3 URL** below, and Click **Next**
     `https://wp-workshop-template.s3.amazonaws.com/newvpc.template`
 
-![](/assets/lab1-1.png)
+![](/static/assets/lab1-1.png)
 
 * For **Stack name**, enter `vpc-stack` , For **Number of Availability Zones** select **2**, 
 * For **Availability Zones**, choose **us-east-1a** and **us-east-1b**, leave other setting as default value and click **Next**
