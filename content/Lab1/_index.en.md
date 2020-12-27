@@ -27,9 +27,9 @@ tags:
 * On the **Review** page, review and confirm the settings. 
 * Check the box acknowledging that the template will create IAM resources and Click **Create Stack**
 
-![](/lab1-2.png)
+![](/assets/lab1-2.png)
 
-![](/lab1-3.png)
+![](/assets/lab1-3.png)
 
 * After 3-5 minute, visit your **CloudFormation stacks** page, when the status of vpc-stack shows **CREAT_COMPLETE**, click **Outputs** in menu, you will see several resources are created.
 
