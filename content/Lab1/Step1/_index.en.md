@@ -2,7 +2,6 @@
 title: "Step 1. Create a VPC CloudFormation Stack"
 chapter: false
 weight: 30
-font_size: 10
 ---
 
 
