@@ -5,12 +5,6 @@ weight: 30
 
 ---
 
-
-
-
-
-### 5. Set up the WordPress Environment
-
 * Visit [**EC2 console**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceId), 
 * Click the **Edit** button under **Name** column, enter `Public`  and click **Save**
 * Select the **Public** instance and click **Connect**, 

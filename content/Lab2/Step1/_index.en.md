@@ -4,9 +4,6 @@ chapter: false
 weight: 30
 ---
 
-
-### 1. Create an Application Load Balancer
-
 * Visit EC2 instance page, select the public WordPress instance created in Lab1
 * Click **Actions** → **Image and templates** → **Create image**
 * Enter the **Image name** and click **Create image**

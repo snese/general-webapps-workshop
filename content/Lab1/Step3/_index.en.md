@@ -4,11 +4,6 @@ chapter: false
 weight: 30
 ---
 
-
-
-
-### 3. Launch a EC2 Instance
-
 * Visit **EC2 console** and click Launch Instances
 * In **Choose an Amazon Machine Image (AMI)** page, select **Amazon Linux 2 AMI (HVM), SSD Volume Type**,
 * In **Choose an Instance Type** page, select **t2.micro**

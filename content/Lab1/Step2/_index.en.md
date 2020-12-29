@@ -4,8 +4,6 @@ chapter: false
 weight: 30
 ---
 
-### 2. Create a RDS MySQL Database
-
 * Visit [**RDS console**](https://console.aws.amazon.com/rds/home?region=us-east-1), click **Create Database**
 
 ![](/images/lab1-5.png)

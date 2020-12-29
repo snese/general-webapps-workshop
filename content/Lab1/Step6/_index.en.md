@@ -5,9 +5,6 @@ weight: 30
 
 ---
 
-
-### 6. Visit your website and configure the WordPress setting
-
 * Visit [**IAM console**](https://console.aws.amazon.com/iam/home?region=us-east-1#/home)
 * Click **Users** on the left menu, then click **Add user** 
 * Enter`wordpress-user` in **username**

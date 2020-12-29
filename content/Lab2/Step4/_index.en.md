@@ -10,8 +10,6 @@ tags:
   - EC2
 ---
 
-### 4. Modify the WordPress Settings
-
 * Find the Domain name of ALB Created in Step 1, paste it on browser to visit your WordPress page, scroll down and click **Log in** to enter the admin page
 
 ![](/images/lab2-21.png)

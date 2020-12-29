@@ -5,9 +5,6 @@ weight: 30
 
 --- 
 
-### 3. Create a CloudFront Distribution
-
-
 #### 3a. Create distribution via cli
 
 [GitHub Repo](https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard)

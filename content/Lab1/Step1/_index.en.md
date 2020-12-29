@@ -5,7 +5,6 @@ weight: 30
 ---
 
 
-### 1. Create a VPC CloudFormation Stack
 
 * Visit [**CloudFormation console**](https://console.aws.amazon.com/cloudformation/home?region=us-east-1), paste **Amazon S3 URL** below, and Click **Next**
     `https://wp-workshop-template.s3.amazonaws.com/newvpc.template`

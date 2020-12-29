@@ -5,8 +5,6 @@ weight: 30
 
 ---
 
-### 2. Create an Auto-Scaling Group
-
 * Visit **EC2/Network & Security/Security Groups**
     Click **Create security group**
 
