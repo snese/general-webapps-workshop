@@ -16,23 +16,23 @@ weight: 30
 * Click **Next: Tags** → **Next: Review** → **Create user** 
 * Click **Download .csv** to store your Access/Secret key
 
-![](/assets/lab1-16.png)
+![](/images/lab1-16.png)
 
-![](/assets/lab1-17.png)
+![](/images/lab1-17.png)
 
-![](/assets/lab1-18.png)
+![](/images/lab1-18.png)
 
-![](/assets/lab1-19.png)
+![](/images/lab1-19.png)
 
 
 * Open another tab/window and visit [**EC2 console**](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceId)
 * Select the EC2 instance, and find the **Public IPv4 DNS** in **Details** below and paste it on your browser, then you will see the setup page of WordPress.
 
-![](/assets/lab1-20.png)
+![](/images/lab1-20.png)
 
 * In setup page, enter your own value in the **Site Title**, **Username**, **Password** and **Your Email**, then click **Install WordPress**
     
-![](/assets/lab1-21.png)
+![](/images/lab1-21.png)
 
 * After few seconds, it will be redirected to Login page, 
 * Enter your **username** and **password**, and click **Login** button, you will see the **admin** page,
@@ -42,9 +42,9 @@ weight: 30
 * In **CDN** section, for **CDN type**, select **Origin Push:S3**, 
 * For **CDN**, make sure it is **Enable** and Click **Save all Settings**
 
-![](/assets/lab1-22.png)
+![](/images/lab1-22.png)
 
-![](/assets/lab1-23.png)
+![](/images/lab1-23.png)
 
 * Click **Performance/CDN** on the left menu, scroll down to find **Configuration: Objects** section 
 * Copy and paste the **Access key ID** and **Secret key** from IAM user creation page
@@ -54,10 +54,10 @@ weight: 30
 * Click **Performance/CDN** the left menu and click **export the media library, wp-includes, theme files**  
 * Click **custom files → start** button to export file from EC2 to S3 bucket
 
-![](/assets/lab1-24.png)
+![](/images/lab1-24.png)
 
-![](/assets/lab1-25.png)
+![](/images/lab1-25.png)
 
 * Now, you can view your sample page in `<your ec2 domain>/index.php/sample-page/`
     
-![](/assets/lab1-26.png)
+![](/images/lab1-26.png)

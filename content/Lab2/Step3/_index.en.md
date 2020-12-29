@@ -29,12 +29,12 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 
 * Visit CloudFront console, and click **Create distributions**, choose **Web** for delivery method
 
-![](/image/lab2-16.png)
+![](/images/lab2-16.png)
 
 
 * For **Origin Domain Name**, select **wordpress-alb**
 
-![](/image/lab2-17.png)
+![](/images/lab2-17.png)
 
 * In **Default Cache Behavior Settings**
 * For **Origin Protocol Policy**, select **HTTP and HTTPS**
@@ -49,7 +49,7 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 * For **Default TTL**, enter `300`
 * For **Forward Cookies**, select **All** 
 
-![](/image/lab2-18.png)
+![](/images/lab2-18.png)
 
 * For **Query String Forwarding and Caching**, select **Forward all, cache based on all**
 * For **Smooth Streaming**, select **No**
@@ -57,14 +57,14 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 * For **Compress Objects Automatically**, select **Yes**
 * Finally, **Create Distribution**
 
-![](/image/lab2-19.png)
+![](/images/lab2-19.png)
 
 * Visit CloudFront Distribution page
 * Click the **distribution ID** created in last step
 * Click **Origins and Origin Groups **tab, and click **Create Origin**
 * For **Origin Domain Name**, select **S3 bucket** created in Lab 1 and Click **Create**
 
-![](/image/lab2-20.png)
+![](/images/lab2-20.png)
 
 * Next, move to **Behavior** in your Distribution and click **Create Behavior**, follow the table below to create 4 new behaviors:
 

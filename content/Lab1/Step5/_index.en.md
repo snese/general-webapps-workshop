@@ -16,7 +16,7 @@ weight: 30
 * Select the **Public** instance and click **Connect**, 
 * In **Connect to instance** page, click **SSH client** on menu and you can find the **connection command** in **Example**.
 
-![](/image/lab1-15.png)
+![](/images/lab1-15.png)
 
 **Windows User:** follow the step in [this deck](https://github.com/snese/general-webapps-workshop/blob/main/content/Reference/putty_setup.pdf) to connect EC2 instance by [**Putty**](https://www.putty.org/)
 
