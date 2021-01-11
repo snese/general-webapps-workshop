@@ -1,5 +1,5 @@
 ---
-title: "(Optional)Step 5. Create a read replica for an Amazon RDS DB instance"
+title: "Step 5. Create a read replica for an Amazon RDS DB instance (Optional)"
 chapter: false
 weight: 30
 
