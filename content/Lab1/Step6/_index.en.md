@@ -47,6 +47,10 @@ weight: 30
 * Copy and paste the **Access key ID** and **Secret key** from IAM user creation page
 * For **Bucket**, enter `wp-workshop-<custom name>` and click **Create as new bucket**
 * Click **Test S3 upload** to ensure connection succeeded and click **Save settings & Purge Caches**
+
+![](/images/lab1-27.png)
+
+
 * Click the **Page/All pages** on the left menu, click **Simple page** to edit it click “+” icon on the top left and insert a sample image, then click **Update** to confirm the change. [download sample image](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_REV_SQ.8c88ac215fe4e441dc42865dd6962ed4f444a90d.png)
 * Click **Performance/CDN** the left menu and click **export the media library, wp-includes, theme files**  
 * Click **custom files → start** button to export file from EC2 to S3 bucket
