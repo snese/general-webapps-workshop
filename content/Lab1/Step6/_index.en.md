@@ -46,7 +46,7 @@ weight: 30
 * Click **Performance/CDN** on the left menu, scroll down to find **Configuration: Objects** section 
 * Copy and paste the **Access key ID** and **Secret key** from IAM user creation page
 * For **Bucket**, enter `wp-workshop-<custom name>` and click **Create as new bucket**
-* Click **Test S3 upload** to ensure connection succeeded and click **Save settings & Purge Caches**
+* Click **Test S3 upload** to ensure connection succeeded and click **Save all Settings**
 
 ![](/images/lab1-27.png)
 
