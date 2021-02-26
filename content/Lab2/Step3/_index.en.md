@@ -5,8 +5,6 @@ weight: 30
 
 --- 
 
-```
-
 #### 3. Create distribution manually
 
 * Visit CloudFront console, and click **Create distributions**, choose **Web** for delivery method
