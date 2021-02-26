@@ -51,4 +51,4 @@ weight: 30
 
 ![](/images/lab2-27.png)
 
-More details about CloudFront setting can be found in this [blogpost](https://aws.amazon.com/tw/blogs/startups/how-to-accelerate-your-wordpress-site-with-amazon-cloudfront/)
+More details about CloudFront settings can be found in this [blogpost](https://aws.amazon.com/tw/blogs/startups/how-to-accelerate-your-wordpress-site-with-amazon-cloudfront/)
