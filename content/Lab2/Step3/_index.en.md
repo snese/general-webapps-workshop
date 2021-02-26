@@ -5,24 +5,9 @@ weight: 30
 
 --- 
 
-#### 3a. Create distribution via cli
-
-[GitHub Repo](https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard)
-
-* Open a Cloud9 IDE, and run following scripts in terminal
-
-```
-git clone https://github.com/hhh2012aa/wordpress-cloudfront-distrubution-config-wizard
-cd wordpress-cloudfront-distrubution-config-wizard/
-python create-config.py
 ```
 
-```
-# Create CloudFront distribution using configuration file
-aws cloudfront create-distribution --distribution-config file://my-create-CloudFront.json
-```
-
-#### 3b. Create distribution manually
+#### 3. Create distribution manually
 
 * Visit CloudFront console, and click **Create distributions**, choose **Web** for delivery method
 
@@ -34,19 +19,20 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 ![](/images/lab2-17.png)
 
 * In **Default Cache Behavior Settings**
-* For **Origin Protocol Policy**, select **HTTP and HTTPS**
+* For **Origin Protocol Policy**, select ** Redirect HTTP to HTTPS**
 * For **Allowed HTTP Methods**, select **GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE**
 * For **Cached HTTP Methods**, select **GET, HEAD, OPTIONS**
 * For **Cache and origin request settings**, select **Use legacy cache settings**
 * For **Cache Based on Selected Request Headers, select Whitelist**
 * For **Whitelist Headers**, search and add **Host** and **Origin**
+
+![](/images/lab2-18.png)
+
 * For **Object Caching**, select **Customize**
 * For **Minimum TTL**, enter `0`
 * For **Maximum TTL**, enter `31536000`
 * For **Default TTL**, enter `300`
-* For **Forward Cookies**, select **All** 
-
-![](/images/lab2-18.png)
+* For **Forward Cookies**, select **comment_author_*, comment_author_email_*, comment_author_url_*, wordpress_*, wordpress_logged_in, wordpress_test_cookie, wp-setting-** 
 
 * For **Query String Forwarding and Caching**, select **Forward all, cache based on all**
 * For **Smooth Streaming**, select **No**
@@ -65,21 +51,6 @@ aws cloudfront create-distribution --distribution-config file://my-create-CloudF
 
 * Next, move to **Behavior** in your Distribution and click **Create Behavior**, follow the table below to create 4 new behaviors:
 
+![](/images/lab2-27.png)
 
-
-|Path Pattern	|/wp-includes/*	|/wp-content/*	|
-|---	|---	|---	|
-|Origin Domain Name	|<your S3 bucket>	|<your S3 bucket>	|
-|Viewer Protocol Policy	|HTTP and HTTPS	|HTTP and HTTPS	|
-|Allowed HTTP Methods	|GET, HEAD, OPTIONS	|GET, HEAD, OPTIONS	|
-|Cached HTTP Methods	|GET, HEAD, OPTIONS	|GET, HEAD, OPTIONS	|
-|Cache and origin request settings	|Use legacy cache settings	|Use legacy cache settings	|
-|Cache Based on Selected Request Headers	|Whitelist	|Whitelist	|
-|Whitelist Headers	|Origin, Access-Control-Request-Headers,Access-Control-Request-Method|Origin, Access-Control-Request-Headers,Access-Control-Request-Method	|
-|Object Caching	|Customize	|Customize	|
-|Min/Max/Default TTL	|0/604800/86400	|0/604800/86400	|
-|Forward Cookies	|None	|None	|
-|Query String Forwarding and Caching	|None	|None	|
-|Smooth Streaming	|No	|No	|
-|Restrict Viewer Access	|No	|No	|
-|Compress Objects Automatically	|Yes	|Yes	|
+More details about CloudFront setting can be found in this [blogpost](https://aws.amazon.com/tw/blogs/startups/how-to-accelerate-your-wordpress-site-with-amazon-cloudfront/)
