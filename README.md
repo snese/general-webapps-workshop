@@ -25,16 +25,6 @@ popd
 hugo serve -D
 ```
 
-### Containerized Development
-
-The image can also serve as a development environment using [docker-compose](https://docs.docker.com/compose/).
-The following command will spin up a container exposing the website at [localhost:1313](http://localhost:1313) and mount `config.toml` and the directories `./content`, `./layouts` and `./static`, so that local changes will automatically be picked up by the development container.
-
-```
-$ docker-compose up -d  ## To see the logs just drop '-d'
-Starting ec2-spot-workshops_hugo_1 ... done
-```
-
 ## License
 
 This library is licensed under the Amazon Software License.
