@@ -4,12 +4,12 @@ chapter: false
 weight: 30
 ---
 
+* Copy [**sample code**](/Lab1/Step1/template/new-vpc.template) and paste in a new file named `new-vpc.template`
+
+* Visit [**CloudFormation console**](https://console.aws.amazon.com/cloudformation/home?region=us-east-1), upload the `new-vpc.template` just created, and Click **Next**
 
 
-* Visit [**CloudFormation console**](https://console.aws.amazon.com/cloudformation/home?region=us-east-1), paste **Amazon S3 URL** below, and Click **Next**
-    `https://wp-workshop-template.s3.amazonaws.com/newvpc.template`
-
-![](/images/lab1-1.png)
+![](/images/lab1-0.png)
 
 * For **Stack name**, enter `vpc-stack` , For **Number of Availability Zones** select **2**, 
 * For **Availability Zones**, choose **us-east-1a** and **us-east-1b**, leave other setting as default value and click **Next**
