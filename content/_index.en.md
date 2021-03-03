@@ -4,3 +4,6 @@ This workshop is a hands-on tutorial of building website on AWS. In lab 1, we wi
 
 ![](/images/lab2-architecture.jpg)
 
+* Target audience: AWS Beginners
+* Level: 100
+* Region: us-east-1

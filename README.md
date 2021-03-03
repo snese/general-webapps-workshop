@@ -6,6 +6,7 @@ This workshop is a hands-on tutorial of building website on AWS. In this worksho
 
 * Target audience: AWS Beginners
 * Level: 100
+* Region: us-east-1
 
 ## Building the Workshop site
 
