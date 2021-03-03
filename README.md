@@ -7,9 +7,6 @@ This workshop is a hands-on tutorial of building website on AWS. In this worksho
 * Target audience: AWS Beginners
 * Level: 100
 
-
-
-
 ## Building the Workshop site
 
 The content of the workshops is built using [hugo](https://gohugo.io/).
