@@ -8,4 +8,6 @@ After the lab finishes, you have to do the following steps to clean up resources
 1. Disable CloudFront Distribution
 2. Delete Load Balancer
 3. Delete Auto Scaling Group (Lab 2) / Terminate instance (Lab 1)
-4. Delete VPC CloudFormation Stack
+4. Delete RDS Cluster
+5. Delete VPC CloudFormation Stack
+6. Delete S3 Bucket
