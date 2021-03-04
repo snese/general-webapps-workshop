@@ -4,4 +4,4 @@ This workshop is a hands-on tutorial of building website on AWS. In this worksho
 * Level: 100
 * Region: us-east-1
 
-![](/static/images/lab2-architecture.jpg)
+![](/images/lab2-architecture.jpg)
