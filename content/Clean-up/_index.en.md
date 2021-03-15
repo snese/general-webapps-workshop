@@ -12,4 +12,4 @@ After the lab finishes, you have to do the following steps to clean up resources
 * Step 5. Delete VPC CloudFormation Stack
 * Step 6. Delete S3 Bucket
 
-If you are not able to finish the entire labs, also check resources you've created and follow the steps to clean up.
+If you are not able to finish the entire labs, also check resources you've created and follow the steps to clean up that avoid the hourly cost of resources.
