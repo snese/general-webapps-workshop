@@ -7,3 +7,18 @@ This workshop is a hands-on tutorial of building website on AWS. In this worksho
 * Region: us-east-1
 
 ![](/images/lab2-architecture.jpg)
+
+### Cost
+
+The extimated cost (USD) is shown in below:
+
+* Region: us-east-1
+* Duration: 2 hours
+
+* EC2: 0.0116 (t2.micro) * 2 (hours) * 3 (instances) = 0.0696 
+* RDS: 0.017 * 2 (hours) = 0.034
+* S3: 0.023 (storage) + 0.0054 (Requests) = 0.0284
+* ALB: (0.0225 (hourly charge) + 0.008 (LCU charge) ) * 2 (hours) = 0.061
+* CloudFront: 0.085 (Regional Data Transfer Out to Internet) + 0.0100 (HTTPS requests) = 0.095
+* Total: ~ 0.3 (USD)
+
