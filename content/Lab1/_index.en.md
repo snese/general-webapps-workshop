@@ -1,5 +1,5 @@
 ---
-title: "Lab 1 - Host a sigle-instance website"
+title: "Lab 1 - Host a single-instance website"
 chapter: false
 weight: 30
 tags:
