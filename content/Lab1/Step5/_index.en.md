@@ -126,7 +126,7 @@ define( 'W3TC_CONFIG_DATABASE', true );
 
 ```
 sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
-sudo yum install php-xml 
+sudo yum install -y php-xml 
 cd /home/ec2-user
 sudo cp -r wordpress/* /var/www/html/
 sudo chown -R apache:apache /var/www/html
