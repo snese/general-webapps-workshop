@@ -117,8 +117,9 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 ```
 /** to allow 'W3TC' plugin write the configuration data into DB */
 define( 'W3TC_CONFIG_DATABASE', true );
-/** to allow https in WordPress, will be used in lab 2/
-$_SERVER['HTTPS'] = 'on';
+/** to allow https in WordPress, will be used in lab 2*/
+/** Uncomment this when doing Lab 2*/
+// $_SERVER['HTTPS'] = 'on';
 ```
 
 * Run the following command to deploy WordPress on your computer: 
