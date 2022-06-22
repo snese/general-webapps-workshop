@@ -112,14 +112,11 @@ define( 'NONCE_SALT',       'put your unique phrase here' );
 
 
 
-* Also, paste the script below. After modifying the right value in configuration file, use **CTRL + O** to save file, **CTRL + X **to quit** nano editor**
+* Also, paste the script below. After modifying the right value in configuration file, use **CTRL + O** to save file, **CTRL + X** to quit nano editor
 
 ```
 /** to allow 'W3TC' plugin write the configuration data into DB */
 define( 'W3TC_CONFIG_DATABASE', true );
-/** to allow https in WordPress, will be used in lab 2*/
-/** Uncomment this when doing Lab 2*/
-// $_SERVER['HTTPS'] = 'on';
 ```
 
 * Run the following command to deploy WordPress on your computer: 

@@ -4,6 +4,22 @@ chapter: false
 weight: 30
 ---
 
+* Connect to your WordPress instance created in Lab1
+* Move into WordPress folder and edit the **wp-config.php** file
+
+```
+cd /var/www/html/
+nano wp-config.php
+```
+
+* Add the following codes in the new line for upcoming steps
+```
+$_SERVER['HTTPS'] = 'on';
+```
+* Use **CTRL + O** to save file, **CTRL + X** to quit nano editor
+
+
+
 * Visit EC2 instance page, select the public WordPress instance created in Lab1
 * Click **Actions** → **Image and templates** → **Create image**
 * Enter the **Image name** and click **Create image**
