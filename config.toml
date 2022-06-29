@@ -73,3 +73,8 @@ name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
 url = "https://github.com/snese/general-webapps-workshop"
 weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-bullhorn'></i> Credits"
+url = "https://github.com/snese/general-webapps-workshop/graphs/contributors"
+weight = 30
