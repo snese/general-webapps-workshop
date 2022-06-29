@@ -4,31 +4,31 @@ chapter: false
 weight: 30
 ---
 
-* Visit **EC2 console** and click Launch Instances
-* In **Choose an Amazon Machine Image (AMI)** page, select **Amazon Linux 2 AMI (HVM), SSD Volume Type**,
-* In **Choose an Instance Type** page, select **t2.micro**
-* Click **Next: Configure Instance Details** button
+* Visit the [**EC2 console**](https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1) and click "Launch Instance".
 
 ![](/images/lab1-10.png)
 
+On the following page, please use the following parameters for defining the attributes of the virtual machine that we are about to start up for the Wordpress instance.
+
+* **Name**: `wordpress`
+* **Application and OS Images (Amazon Machine Image)**: Amazon Linux (should be pre-selected)
+* **Instance type**: t2.micro (should also be pre-selected)
+  **Note**: be sure to use only instances types that are marked as "Free tier eligible" to avoid additional charges on your AWS account.
+
 ![](/images/lab1-11.png)
 
-* In **Configure Instance Details** page
-* For **Network**, select **Vpc / vpc-stack**
-* For **Subnet**, select **PublicSubnet0**
-* Click **Next: Add Storage** → **Next: Add Tags**
+* In the section "**Key pair (login)**", click "**Create new key pair**". A dialog will open.
+* As "**Key pair name**", enter `wordpress`.
+* Click "**Create key pair**". This will download the private key file to your local machine, that we will need later for connecting to the machine.
 
 ![](/images/lab1-12.png)
 
-* For **Assign a security group**, select **Create a new Security Group**
-* For **Security group name**, enter `public-instance-sg `
-* In the pre-created rule, 
-* For **Source**, select **My IP**, your IP will be auto-detected, and click **Review and Launch** → **Launch**
+* In the section "**Network settings**", click the "**Edit**" button on the top right.
+* For **VPC**, select "**Vpc / vpc-stack**" (the VPC we've created earlier).
+* For **Subnet**, select "**PublicSubnet0**".
+* For **Security group name**, enter `public-instance-sg`.
+* Copy the same to the **Description** field.
 
 ![](/images/lab1-13.png)
 
-* Select **Create a new key pair**, Enter the **Key pair name** and click **Download key pair**
-* Finally, **Launch** the instance
-
-![](/images/lab1-14.png)
-
+Leave the remaining settings as they are and then click **Launch instance**.
