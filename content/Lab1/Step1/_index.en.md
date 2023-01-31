@@ -9,7 +9,7 @@ weight: 30
 * Scroll down and select "Upload a template file", then select the `new-vpc.template` that was downloaded before. 
 * Click **Next**
 
-![](/images/lab1-0.png)
+![/images/lab1-0.png](/images/lab1-0.png)
 
 * For **Stack name**, enter `vpc-stack`.
 * For **Number of Availability Zones** select **2**.
