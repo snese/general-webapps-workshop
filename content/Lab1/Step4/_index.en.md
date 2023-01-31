@@ -17,6 +17,9 @@ In this section, we will modify the Security Groups of the EC2 instance and MySQ
 * Click **Add rule**.
 * For **Type**, select **HTTP**.
 * For **Source**, select **db-sg** in the drow-down field.
+* Click **Add rule**.
+* For **Type**, select **HTTP**.
+* For **Source**, select **0.0.0.0** in the drow-down field.
 * Click **Save rules**.
 
 ![](/images/lab1-14.png)
