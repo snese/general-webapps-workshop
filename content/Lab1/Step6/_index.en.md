@@ -15,12 +15,18 @@ First of all, we'll create a new user in AWS that the Wordpress plugin will use 
 ![](/images/lab1-16.png)
 
 * For **User name**, enter `Wordpress`.
-* In the section **Select AWS access type**, select **Access key - Programmatic access**.
-* Click **Next: Permissions**.
-* Select the **Attach existing policies directly** box on top of the next page.
+* Click **Next**.
+* Select the **Attach policies directly** box on top of the next page.
 * Search for `CloudFrontFullAccess` and select it. 
 * Do the same for `AmazonS3FullAccess`.
-* Click **Next: Tags** → **Next: Review** → **Create user** .
+* Click **Next** → **Create user**.
+* Go into created user.
+* Click **Security credentials** tab.
+* Go to the **Access keys** section.
+* Click **Create access key**.
+* Select **Application running on an AWS compute service**.
+* Click checkbox **I understand the above recommendation and want to proceed to create an access key**.
+* Click **Next** → **Create**.
 * Click **Download .csv** to store your Access/Secret key. These are the access credentials that the plugin will use to programmatically access Amazon S3.
 
 Now that the user was created, let's access the Wordpress instance via the EC2 instance's public address.
