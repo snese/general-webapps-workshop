@@ -10,7 +10,14 @@ tags:
   - EC2
 ---
 
-* Find the Domain name of ALB Created in Step 1, paste it on browser to visit your WordPress page, scroll down and click **Log in** to enter the admin page
+* Connect to the EC2 Inctance that was launched in Lab 1
+* Disable https for this intance - comment `$_SERVER['HTTPS'] = 'on';`
+* start the web service
+```
+sudo service httpd start
+sudo systemctl restart php-fpm
+```
+* Copy the EC2 instance **Public IPv4 DNS** url add to it `/wp-admin`, paste it on browser to enter the admin page
 
 ![](/images/lab2-21.png)
 
