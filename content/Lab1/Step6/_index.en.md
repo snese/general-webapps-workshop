@@ -65,8 +65,8 @@ Now that the user was created, let's access the Wordpress instance via the EC2 i
 
 Let's add an image to the page now to see if our setup works.
 
-* In the menu on the left again, click **Page** > **All pages**, 
-* Hover over **Simple page**, then click **Edit** in the menu below.
+* In the menu on the left again, click **Pages** > **All pages**, 
+* Hover over **Sample page**, then click **Edit** in the menu below.
 * On the edit page, a info dialog may pop up, that you can close. After that, click the **[+]** icon on the top left and insert an image. Choose one from your local machine, or copy/paste any image URL from the web (such as [this](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_REV_SQ.8c88ac215fe4e441dc42865dd6962ed4f444a90d.png)).
 * Click **Update** to confirm the change.
 

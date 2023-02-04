@@ -27,7 +27,7 @@ $_SERVER['HTTPS'] = 'on';
 ![](/images/lab2-1.png)
 
 * Visit **EC2/Load Balancing/Load Balancers**
-* Click **Create Load Balalncer**
+* Click **Create Load Balancer**
 
 ![](/images/lab2-2.png)
 
