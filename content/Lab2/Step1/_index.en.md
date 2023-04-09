@@ -27,7 +27,7 @@ $_SERVER['HTTPS'] = 'on';
 ![](/images/lab2-1.png)
 
 * Visit **EC2/Load Balancing/Load Balancers**
-* Click **Create Load Balalncer**
+* Click **Create Load Balancer**
 
 ![](/images/lab2-2.png)
 
@@ -43,7 +43,11 @@ $_SERVER['HTTPS'] = 'on';
 
 * In **Step 2: Configure Security Settings**, click **Next**
 * In **Step 3: Configure Security Groups**, for **Assign a security group**, choose **Create a new security group**
-* For **Security group name**, enter `alb-sg` and click **Next Configure Routing**
+* For **Security group name**, enter `alb-sg`
+* For **VPC**, choose **Vpc / vpc-stack**
+* Click **Add rule** in **Inbound rules** section.
+* For **Type**, select **HTTP**
+* For **Source**, select **Anywhere-IPv4** and click **Create security group**
 
 ![](/images/lab2-5.png)
 

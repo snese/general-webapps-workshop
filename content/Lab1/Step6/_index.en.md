@@ -15,12 +15,18 @@ First of all, we'll create a new user in AWS that the Wordpress plugin will use 
 ![](/images/lab1-16.png)
 
 * For **User name**, enter `Wordpress`.
-* In the section **Select AWS access type**, select **Access key - Programmatic access**.
-* Click **Next: Permissions**.
-* Select the **Attach existing policies directly** box on top of the next page.
+* Click **Next**.
+* Select the **Attach policies directly** box on top of the next page.
 * Search for `CloudFrontFullAccess` and select it. 
 * Do the same for `AmazonS3FullAccess`.
-* Click **Next: Tags** → **Next: Review** → **Create user** .
+* Click **Next** → **Create user**.
+* Go into created user.
+* Click **Security credentials** tab.
+* Go to the **Access keys** section.
+* Click **Create access key**.
+* Select **Application running on an AWS compute service**.
+* Click checkbox **I understand the above recommendation and want to proceed to create an access key**.
+* Click **Next** → **Create**.
 * Click **Download .csv** to store your Access/Secret key. These are the access credentials that the plugin will use to programmatically access Amazon S3.
 
 Now that the user was created, let's access the Wordpress instance via the EC2 instance's public address.
@@ -59,8 +65,8 @@ Now that the user was created, let's access the Wordpress instance via the EC2 i
 
 Let's add an image to the page now to see if our setup works.
 
-* In the menu on the left again, click **Page** > **All pages**, 
-* Hover over **Simple page**, then click **Edit** in the menu below.
+* In the menu on the left again, click **Pages** > **All pages**, 
+* Hover over **Sample page**, then click **Edit** in the menu below.
 * On the edit page, a info dialog may pop up, that you can close. After that, click the **[+]** icon on the top left and insert an image. Choose one from your local machine, or copy/paste any image URL from the web (such as [this](https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_REV_SQ.8c88ac215fe4e441dc42865dd6962ed4f444a90d.png)).
 * Click **Update** to confirm the change.
 

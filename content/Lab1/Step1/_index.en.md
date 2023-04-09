@@ -10,7 +10,7 @@ weight: 30
 * Click **Next**
 
 ![](/images/lab1-0.png)
-
+![](/images/lab1-1.png)
 * For **Stack name**, enter `vpc-stack`.
 * For **Number of Availability Zones** select **2**.
 * For **Availability Zones**, choose **us-east-1a** and **us-east-1b**. 
